@@ -1,23 +1,23 @@
-document.addEventListener("contextmenu",e=>e.preventDefault())
+document.addEventListener("contextmenu",function(e){
+e.preventDefault();
+});
 
 document.onkeydown=function(e){
 
-if(e.keyCode==123) return false
-
-if(e.ctrlKey && e.shiftKey && e.keyCode==73) return false
-
-if(e.ctrlKey && e.shiftKey && e.keyCode==74) return false
-
-if(e.ctrlKey && e.keyCode==85) return false
-
+if(e.keyCode==123){
+return false;
 }
 
-setInterval(function(){
-
-if(window.outerWidth - window.innerWidth > 160){
-
-document.body.innerHTML="Access Denied"
-
+if(e.ctrlKey && e.shiftKey && e.keyCode==73){
+return false;
 }
 
-},1000)
+if(e.ctrlKey && e.shiftKey && e.keyCode==74){
+return false;
+}
+
+if(e.ctrlKey && e.keyCode==85){
+return false;
+}
+
+};
